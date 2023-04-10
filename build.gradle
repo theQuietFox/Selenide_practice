@@ -1,0 +1,29 @@
+plugins {
+    id 'java'
+}
+
+group 'ru.qa.irakulikova'
+version '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+}
+
+compileTestJava {
+    options.encoding = 'UTF-8'
+}
+
+dependencies {
+    implementation 'org.junit.jupiter:junit-jupiter:5.9.2',
+            'com.codeborne:selenide:6.12.4'
+    testImplementation(
+            'org.junit.jupiter:junit-jupiter-api:5.9.2',
+            'com.codeborne:selenide:6.12.4'
+
+    )
+
+}
+
+test {
+    useJUnitPlatform()
+}
